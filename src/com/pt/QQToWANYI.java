@@ -21,12 +21,12 @@ public class QQToWANYI {
         props.put("mail.smtp.auth","true");
         // 填写对应的发送方的服务器
         props.put("mail.smtp.host","smtp.qq.com");
-        // 设置端口号 qq邮箱端口为587 ,可以设置端口也可以不进行设置
-       // props.put("mail.smtp.port","587");
+        // 设置端口号 qq邮箱端口为587
+        props.put("mail.smtp.port","587");
         // 写信人的账号
-        props.put("mail.smtp.user","xxxxxxxx@qq.com");
+        props.put("mail.smtp.user","xxxxxxx@qq.com");
         // 写信人的密钥
-        props.put("mail.smtp.password","xxxxxxxx");
+        props.put("mail.smtp.password","xxxxxxx");
 
         // 构建授权信息，用于进行smtp身份验证
         Authenticator authenticator = new Authenticator() {
@@ -49,7 +49,7 @@ public class QQToWANYI {
         message.setFrom(new InternetAddress(props.getProperty("mail.smtp.user")));
 
         // 设置接受邮件人地址
-        message.setRecipients(Message.RecipientType.TO,"xxxxxxxx@163.com");
+        message.setRecipients(Message.RecipientType.TO,"xxxxx@163.com");
 
         // 设置邮箱的标题
         message.setSubject("跨服务器发送邮箱");
